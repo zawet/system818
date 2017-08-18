@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<title>桥梁html</title>
+<link href="css/system.css" type="text/css"  rel="stylesheet">
+</head>
+<body class="sy_body">
+    <div class="sy_heard clear trn">
+    	<div class="sy_logo"><img src="images/logo.png"></div>
+        <ul class="sy_nav clear"></ul>
+        <div class="sy_select">
+            <a class="select_btn">登录名称<i class="syicon">&#xe611;</i></a>
+            <div class="sy_select_mian">
+                <a>修改密码</a>
+                <a>退出登录</a>
+            </div>
+        </div>
+    </div>
+    <div class="sy_mian">
+    	
+    </div>
+    <div class="sy_foot">中山市聚云软件科技有限公司   版权所有</div>
+    
+    <script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/nav.js"></script>
+    <script>
+		
+		
+    	$(function(){
+			$(".select_btn").on("click",function(){
+				$(this).next(".sy_select_mian").slideToggle(200);
+			});
+			
+			$(".sy_nav").Nav_s();	
+		})
+    </script>
+</body>
+</html>
