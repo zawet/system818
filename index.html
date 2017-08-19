@@ -21,10 +21,85 @@
             </div>
         </div>
     </div>
-    <div class="sy_mian">
-    	
+    <div class="sy_mian clear">
+    	<div class="sy_left">
+			<div class="sy_scroll">
+				<ul class="sy_manynav allopen">
+					<li class="sy_manynav_li">
+						<a>广东省</a>
+						<ul class="sy_manynav allopen">
+							<li class="sy_manynav_li">
+								<a>中山市</a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="sy_manynav_li">
+						<a>湖南省</a>
+						<ul class="sy_manynav allopen">
+							<li class="sy_manynav_li"><a>长沙市</a></li>
+						</ul>
+					</li>
+				</ul>	
+			</div>
+    	</div>
+    	<div class="sy_right">
+    		<div class="sy_orderbox clear">
+				<div class="sy_sg sy_sg_3">
+					<div class="sy_selects">
+						<a class="sy_select_value"><span class="dian3">选择桥梁</span><i class="syicon">&#xe611;</i></a>
+						<div class="sy_options">
+							<a class="sy_option dian3">桥梁1</a>
+							<a class="sy_option dian3">桥梁2</a>
+							<a class="sy_option dian3">桥梁3</a>
+						</div>
+					</div>
+				</div>
+				<div class="sy_sg sy_sg_3"><input type="text" placeholder="报告名称" class="sy_input"></div>
+				<div class="sy_sg sy_sg_3">
+					<div class="sy_selects">
+						<a class="sy_select_value"><span class="dian3">选择桥梁</span><i class="syicon">&#xe611;</i></a>
+						<div class="sy_options">
+							<a class="sy_option dian3">桥梁1</a>
+							<a class="sy_option dian3">桥梁2</a>
+							<a class="sy_option dian3">桥梁3</a>
+						</div>
+					</div>
+				</div>
+				<div class="sy_sg sy_sg_3"><a class="sy_but hbg">查询</a></div>
+    		</div>
+    		<div class="sy_operation clear">
+				<a class="sy_but fl">新增</a>
+				<a class="sy_but fl">删除</a>
+				<a class="sy_but fl">修改</a>
+				<a class="sy_but fr">导出</a>
+    		</div>
+    		<table class="sy_table">
+    			<thead><tr><th>标题1</th><th>标题2</th><th>标题3</th><th>标题4</th><th>标题5</th></tr></thead>
+    			<tbody>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			<tr><td>内容1</td><td>内容2</td><td>内容3</td><td>内容4</td><td>内容5</td></tr>
+    			</tbody>
+    		</table>
+    		<div class="sy_page clear">
+    			<a class="sy_but un">首页</a>
+				<a class="sy_but un">上一页</a>
+				<a class="sy_but">下一页</a>
+				<a class="sy_but">末页</a>
+   				<span>共2页，到第</span>
+   				<input type="text" class="sy_input s">
+   				<span>页</span>
+    		</div>
+    	</div>
     </div>
-    <div class="sy_foot">中山市聚云软件科技有限公司   版权所有</div>
+    <!--<div class="sy_foot">中山市聚云软件科技有限公司   版权所有</div>-->
     
     <script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/nav.js"></script>
@@ -35,6 +110,12 @@
 			$(".select_btn").on("click",function(){
 				$(this).next(".sy_select_mian").slideToggle(200);
 			});
+			$("body").on("click",".sy_select_value",function(){
+				$(this).parent().find(".sy_options").slideToggle(100);
+			});
+			$("body").on("click",".sy_option",function(){
+				$(this).parent().slideUp(100).parent().find(".sy_select_value span").html($(this).html());
+			})
 			
 			$(".sy_nav").Nav_s();	
 		})
