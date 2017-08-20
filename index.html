@@ -24,12 +24,13 @@
     <div class="sy_mian clear">
     	<div class="sy_left">
 			<div class="sy_scroll">
-				<ul class="sy_manynav allopen">
+			<div class="sy_left_nav">
+				<ul class="sy_manynav allopen first">
 					<li class="sy_manynav_li">
-						<a>广东省</a>
+						<a class="clear"><span>广东省</span><i class="syicon fr">&#xe611;</i></a>
 						<ul class="sy_manynav allopen">
 							<li class="sy_manynav_li">
-								<a>中山市</a>
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe611;</i></a>
 								<ul class="sy_manynav">
 									<li class="sy_manynav_li"><a>板芙大桥</a></li>
 									<li class="sy_manynav_li"><a>xx大桥</a></li>
@@ -38,12 +39,15 @@
 						</ul>
 					</li>
 					<li class="sy_manynav_li">
-						<a>湖南省</a>
+						<a class="clear"><span>湖南省</span><i class="syicon fr">&#xe611;</i></a>
 						<ul class="sy_manynav allopen">
-							<li class="sy_manynav_li"><a>长沙市</a></li>
+							<li class="sy_manynav_li">
+								<a class="clear"><span>长沙市</span><i class="syicon fr r90">&#xe611;</i></a>
+							</li>
 						</ul>
 					</li>
-				</ul>	
+				</ul>
+				</div>	
 			</div>
     	</div>
     	<div class="sy_right">
@@ -115,6 +119,10 @@
 			});
 			$("body").on("click",".sy_option",function(){
 				$(this).parent().slideUp(100).parent().find(".sy_select_value span").html($(this).html());
+			});
+			$("body").on("click",".sy_manynav_li>a",function(){
+				$(this).parent().find(".sy_manynav").first().slideToggle(200);
+				$(this).find("i").toggleClass("r90");
 			})
 			
 			$(".sy_nav").Nav_s();	

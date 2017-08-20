@@ -27,6 +27,7 @@ a,a[href]{ text-decoration:inherit;}
 hr{border: 0;border-top: 1px solid #3e5d7d;height: 0;-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}
 .dian3{ overflow:hidden;text-overflow:ellipsis; white-space:nowrap;}/*单行文字超出显示...*/
 .r180{transform:rotate(-180deg); -webkit-transform:rotate(-180deg);-moz-transform:rotate(-180deg); display:inline-block;}
+.r90{transform:rotate(-90deg); -webkit-transform:rotate(-90deg);-moz-transform:rotate(-90deg);}
 .trn{-webkit-transition: all 0.25s ease-out 0s;-moz-transition: all 0.25s ease-out 0s;transition: all 0.25s ease-out 0s;}/*过度执行动画  ie8以及以下没作用*/
 
 /*简易栅格系统*/
@@ -72,6 +73,19 @@ hr{border: 0;border-top: 1px solid #3e5d7d;height: 0;-webkit-box-sizing: content
 .sy_mian{ width:100%; height:100%; position:relative; }
 .sy_left{ width: 20%; background: #f5f5f5; box-sizing: border-box; position: fixed; top:0; left:0; border-right: 1px solid #ddd;  min-height:100%; min-width: 200px;   overflow: hidden; }
 .sy_scroll{ padding-top:50px;overflow-y: auto; height: 100%; width: 140%; padding-right: 40%; box-sizing: border-box; position:absolute; top:0; left: 0;}
+.sy_left_nav{padding:10px 20px 10px 10px;}
+.sy_manynav{width: 100%;  box-sizing: border-box; display: none; background: #fff; margin:-9px 0 10px; padding:5px 10px 10px 0; border-radius:0 0 4px 4px;  box-shadow: 0 2px 3px #ddd; }
+.sy_manynav.allopen{ display:block; background: none; padding: 0; margin: 0; box-shadow: none; }
+.sy_manynav li.sy_manynav_li{ padding-left:10px; box-sizing: border-box; }
+.sy_manynav li.sy_manynav_li a{color:#32ADF1; display:block;padding:10px; font-size: 14px;border-bottom: 1px  solid #eee; cursor: pointer;}
+.sy_manynav li.sy_manynav_li a:hover{color:#6cb9e4;}
+.sy_manynav li.sy_manynav_li a i{ font-size:22px; color: #737373;}
+.sy_manynav.allopen>li.sy_manynav_li>a{ background: #6cb9e4; border:1px solid #6cb9e4; color:#fff; border-radius:6px;margin-bottom: 5px; position: relative;z-index: 44; }
+.sy_manynav.first>li.sy_manynav_li>a{ background: #32ADF1;border:1px solid #32ADF1;color:#fff;  }
+.sy_manynav.allopen>li.sy_manynav_li>a>i{ color:#fff;}
+.sy_manynav.first>li.sy_manynav_li>a>i{ color: #fff;}
+
+
 
 .sy_right{ width: 80%; box-sizing: border-box; float: right; padding:20px; min-width: 820px; }
 
