@@ -37,13 +37,14 @@
 						.parent().addClass(opts.navValues[i].active);
 						var snavNumber=opts.navValues[i].navSnav.length;
 						var liaW=($(this).width()*7)/100;
+						
 						for(var j=0;j<snavNumber;j++){
 							m.find(".sy_snav").append('<a class="sy_snavli" style="width:'+liaW+'px" href="'+opts.navValues[i].navSnav[j][1]+'">'+opts.navValues[i].navSnav[j][0]+'</a>');
 						}
 						if(snavNumber>3){
 								var snavW=Math.ceil(snavNumber/3);
-								//console.log(snavW,i);
-								snavW=snavW*liaW;
+								snavW=Math.ceil(snavW*liaW);
+								//console.log(snavW);
 								m.find(".sy_snav").css("width",snavW+"px")
 						}
 						thisHtml+=m.html();
