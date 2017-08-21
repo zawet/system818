@@ -15,7 +15,7 @@
 		
 		navValuesActive:[0],//选项第几个为活动项
 		
-		html:'<li class="sy_navli"><a class="sy_navlia"></a><div class="sy_snav clear"></div></li>'
+		html:'<li class="sy_navli"><a class="sy_navlia"><span></span><i class="syicon r90">&#xe600;</i></a><div class="sy_snav clear"></div></li>'
 	}
 	
 	
@@ -30,9 +30,9 @@
 					var thisHtml="";
 					for(var i=0;i<opts.navValues.length;i++){
 						
-						m.find(".sy_navlia")
+						m.find(".sy_navlia span")
 						.html(opts.navValues[i].navTest)
-						.attr("href",opts.navValues[i].href)
+						.parent().attr("href",opts.navValues[i].href)
 						.attr("id",opts.navValues[i].id)
 						.parent().addClass(opts.navValues[i].active);
 						var snavNumber=opts.navValues[i].navSnav.length;
@@ -48,7 +48,7 @@
 								m.find(".sy_snav").css("width",snavW+"px")
 						}
 						thisHtml+=m.html();
-						m.find(".sy_navlia").html("").attr("href","#").attr("id","").parent().removeClass("active");
+						m.find(".sy_navlia span").html("").parent().attr("href","#").attr("id","").parent().removeClass("active");
 						m.find(".sy_snav").html("").css("width",liaW+"px");
 					}
 					$(this).html(thisHtml);

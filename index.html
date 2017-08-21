@@ -43,6 +43,64 @@
 									<li class="sy_manynav_li"><a>xx大桥</a></li>
 								</ul>
 							</li>
+                            
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
+                            <li class="sy_manynav_li">
+								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
+								<ul class="sy_manynav">
+									<li class="sy_manynav_li"><a>板芙大桥</a></li>
+									<li class="sy_manynav_li"><a>xx大桥</a></li>
+								</ul>
+							</li>
                             <li class="sy_manynav_li">
 								<a class="clear"><span>中山市</span><i class="syicon fr r90">&#xe600;</i></a>
 								<ul class="sy_manynav">
@@ -117,7 +175,7 @@
     		</div>
     	</div>
     </div>
-    <!--<div class="sy_foot">中山市聚云软件科技有限公司   版权所有</div>-->
+    <div class="sy_foot">中山市聚云软件科技有限公司   版权所有</div>
     
     <script src="js/jquery-1.9.1.min.js"></script>
 	<script src="js/nav.js"></script>
@@ -125,10 +183,18 @@
 		
 		
     	$(function(){
-			$(".select_btn").on("click",function(){
+			$(document).on("click",":not('.select_btn')",function(){
+				$(".sy_select_mian").slideUp(50);
+			});
+			$(".select_btn").on("click",function(event){
+				event.stopPropagation();
 				$(this).next(".sy_select_mian").slideToggle(200);
 			});
-			$("body").on("click",".sy_select_value",function(){
+			$(document).on("click",":not('.sy_select_value')",function(){
+				$(".sy_options").slideUp(50);
+			});
+			$("body").on("click",".sy_select_value",function(event){
+				event.stopPropagation();
 				$(this).parent().find(".sy_options").slideToggle(100);
 			});
 			$("body").on("click",".sy_option",function(){
@@ -137,7 +203,7 @@
 			$("body").on("click",".sy_manynav_li>a",function(){
 				$(this).parent().find(".sy_manynav").first().slideToggle(200);
 				$(this).find("i").toggleClass("r90");
-			})
+			});
 			
 			$(".sy_nav").Nav_s();	
 		})
